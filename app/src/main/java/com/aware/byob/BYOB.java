@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.aware.Applications;
 import com.aware.Aware;
 import com.aware.Aware_Preferences;
+import com.aware.plugin.google.activity_recognition.ContextCard;
+import com.aware.plugin.google.activity_recognition.Plugin;
 import com.google.android.gms.location.DetectedActivity;
 
 import java.util.List;
@@ -82,7 +84,7 @@ public class BYOB extends ActionBarActivity {
             activity_cards.removeViewAt(0);
         }
 
-        View activity_card = Aware.getContextCard(c, "com.aware.plugin.google.activity_recognition");
+        View activity_card = ContextCard.getContextCard(c);
         if( activity_card != null ) {
             activity_cards.addView(activity_card);
         }

@@ -1,3 +1,5 @@
 include ':app'
 include ':aware-core'
 project(':aware-core').projectDir = new File(settingsDir, '../aware-client/aware-core')
+include ':com.aware.plugin.google.activity_recognition'
+project(':com.aware.plugin.google.activity_recognition').projectDir = new File(settingsDir, '../com.aware.plugin.google.activity_recognition/com.aware.plugin.google.activity_recognition')

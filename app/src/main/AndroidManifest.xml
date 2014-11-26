@@ -19,6 +19,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
+    <uses-permission android:name="com.aware.READ_CONTEXT_DATA"></uses-permission>
+    <uses-permission android:name="com.aware.WRITE_CONTEXT_DATA"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -51,6 +57,17 @@
             </intent-filter>
             <meta-data android:name="android.accessibilityservice" android:resource="@xml/aware_accessibility_config" />
         </service>
+
+        <!-- Add hooks for bundled plugin -->
+        <service android:name="com.aware.plugin.google.activity_recognition.Plugin"></service>
+        <provider
+            android:authorities="com.aware.plugin.google.activity_recognition.provider"
+            android:name="com.aware.plugin.google.activity_recognition.Google_AR_Provider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.aware.READ_CONTEXT_DATA"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
+            />
 
     </application>
 

@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/../aware-client/aware-core" />
+            <option value="$PROJECT_DIR$/../com.aware.plugin.google.activity_recognition/com.aware.plugin.google.activity_recognition" />
           </set>
         </option>
       </GradleProjectSettings>
